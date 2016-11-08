@@ -33,8 +33,8 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./masked-stack.component.scss']
 })
 export class MaskedStackComponent implements OnInit {
-  @Input() width: number = 100;
-  @Input() height: number = 100;
+  @Input() maskWidth: number = 100;
+  @Input() maskHeight: number = 100;
 
   @Input() bgColor: string = 'transparent';
   @Input() frontColor: string = 'transparent';
@@ -44,6 +44,11 @@ export class MaskedStackComponent implements OnInit {
   @Input() value: number;
 
   @Input() animationSecs: number = 0.5;
+
+
+  // TODO: this sucks but I still haven't found a way to get component unique Id
+  @Input() uniqueId: string;
+
 
 
   constructor(
@@ -59,19 +64,19 @@ export class MaskedStackComponent implements OnInit {
 
     switch (this.from) {
       case 'top':
-        str = `translateY(${-this.height * (1 -this.value / this.goal)}px)`;
+        str = `translateY(${-this.maskHeight * (1 -this.value / this.goal)}px)`;
         break;
 
       case 'bottom':
-        str = `translateY(${this.height * (1 - this.value / this.goal)}px)`;
+        str = `translateY(${this.maskHeight * (1 - this.value / this.goal)}px)`;
         break;
 
       case 'left':
-        str = `translateX(${-this.width * (1 - this.value / this.goal)}px)`;
+        str = `translateX(${-this.maskWidth * (1 - this.value / this.goal)}px)`;
         break;
 
       case 'right':
-        str = `translateX(${this.width * (1 - this.value / this.goal)}px)`;
+        str = `translateX(${this.maskWidth * (1 - this.value / this.goal)}px)`;
         break;
     }
     return this.sanitizer.bypassSecurityTrustStyle(str);

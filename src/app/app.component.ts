@@ -45,36 +45,40 @@ export class AppComponent {
   graphBottom = {
     bgColor: this.colors.indigo,
     frontColor: this.colors.pink,
-    width: 30,
-    height: 100,
+    maskWidth: 570,
+    maskHeight: 570,
     value: 33,
-    from: 'bottom'
+    from: 'bottom',
+    uniqueId: 'bottom'
   };
 
   graphTop = {
     bgColor: this.colors.indigo,
     frontColor: this.colors.purple,
-    width: 30,
-    height: 100,
+    maskWidth: 571,
+    maskHeight: 571,
     value: 33,
-    from: 'top'
+    from: 'top',
+    uniqueId: 'top'
   };
 
   graphRight = {
     bgColor: this.colors.indigo,
     frontColor: this.colors.mint,
-    width: 100,
-    height: 30,
+    maskWidth: 584,
+    maskHeight: 584,
     value: 33,
-    from: 'right'
+    from: 'right',
+    uniqueId: 'right'
   };
 
   graphLeft = {
     bgColor: this.colors.indigo,
     frontColor: this.colors.cyan,
-    width: 100,
-    height: 30,
+    maskWidth: 1341,
+    maskHeight: 556,
     value: 33,
-    from: 'left'
+    from: 'left',
+    uniqueId: 'left'
   };
 }

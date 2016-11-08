@@ -1,14 +1,16 @@
 <svg
-  attr.viewBox = "0 0 {{width}} {{height}}"
-  style.width = "{{width}}px"
-  style.height = "{{height}}px">
+  attr.viewBox = "0 0 {{maskWidth}} {{maskHeight}}">
+
+
   <g
-    class = kw-holder>
+    #holder
+    class = kw-holder
+    attr.clip-path= url(#{{uniqueId}}-mask)>
     <rect
       x = 0
       y = 0
-      [attr.width] = width
-      [attr.height] = height
+      [attr.width] = maskWidth
+      [attr.height] = maskHeight
 
       class = kw-back
       [style.fill] = bgColor/>
@@ -16,12 +18,19 @@
     <rect
       x = 0
       y = 0
-      [attr.width] = width
-      [attr.height] = height
+      [attr.width] = maskWidth
+      [attr.height] = maskHeight
       [style.transform] = position
 
       class = kw-front
       [style.transition] = "'transform ' + animationSecs + 's'"
       [style.fill] = frontColor/>
   </g>
+
+
+  <clipPath
+    #mask
+    id = {{uniqueId}}-mask>
+    <ng-content></ng-content>
+  </clipPath>
 </svg>
