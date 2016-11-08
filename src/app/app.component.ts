@@ -42,27 +42,27 @@ export class AppComponent {
   };
 
 
-  graphBottom = {
+  seahorse = {
     bgColor: this.colors.indigo,
     frontColor: this.colors.pink,
     maskWidth: 570,
     maskHeight: 570,
-    value: 33,
+    value: 80,
     from: 'bottom',
     uniqueId: 'bottom'
   };
 
-  graphTop = {
+  triangle = {
     bgColor: this.colors.indigo,
-    frontColor: this.colors.purple,
+    frontColor: this.colors.yellow,
     maskWidth: 571,
     maskHeight: 571,
-    value: 33,
+    value: 65,
     from: 'top',
     uniqueId: 'top'
   };
 
-  graphRight = {
+  nemo = {
     bgColor: this.colors.indigo,
     frontColor: this.colors.mint,
     maskWidth: 584,
@@ -72,12 +72,12 @@ export class AppComponent {
     uniqueId: 'right'
   };
 
-  graphLeft = {
+  dolphin = {
     bgColor: this.colors.indigo,
     frontColor: this.colors.cyan,
-    maskWidth: 1341,
-    maskHeight: 556,
-    value: 33,
+    maskWidth: 588,
+    maskHeight: 588,
+    value: 55,
     from: 'left',
     uniqueId: 'left'
   };

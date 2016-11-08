@@ -1,8 +1,18 @@
 :host{
+  text-align: center;
+}
+
+a{
+  color: #14143e;
+  text-decoration: none;
+}
+
+.holder{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 42px;
 }
 
 ng2-kw-masked-stack{
@@ -10,21 +20,9 @@ ng2-kw-masked-stack{
   display: inline-block;
 }
 
-.shark-graph{
-  width: 200px;
-  height: 120px;
-}
-
-.triangle-graph{
-  width: 200px;
-  height: 200px;
-}
-
-.seahorse-graph{
-  width: 200px;
-  height: 200px;
-}
-
+.dolphin-graph,
+.triangle-graph,
+.seahorse-graph,
 .nemo-graph{
   width: 200px;
   height: 200px;

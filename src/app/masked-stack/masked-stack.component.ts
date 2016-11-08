@@ -15,6 +15,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 
 
 // EXTERNAL
+import { Observable } from 'rxjs/Rx';
 
 
 
@@ -41,13 +42,25 @@ export class MaskedStackComponent implements OnInit {
 
   @Input() from: string = 'bottom'; // top, bottom, left, right
   @Input() goal: number = 100;
-  @Input() value: number;
+
+  @Input()
+  set value(value: number) {
+    this._value = value;
+
+    Observable.timer(0)
+      .first()
+      .subscribe(() => this.valueLoaded = true);
+  }
+
+  _value: number;
 
   @Input() animationSecs: number = 0.5;
 
 
   // TODO: this sucks but I still haven't found a way to get component unique Id
   @Input() uniqueId: string;
+
+  valueLoaded: boolean = false;
 
 
 
@@ -64,19 +77,35 @@ export class MaskedStackComponent implements OnInit {
 
     switch (this.from) {
       case 'top':
-        str = `translateY(${-this.maskHeight * (1 -this.value / this.goal)}px)`;
+        str = `translateY(${
+          this.valueLoaded
+            ? (-this.maskHeight * (1 - this._value / this.goal))
+            : -this.maskHeight
+          }px)`;
         break;
 
       case 'bottom':
-        str = `translateY(${this.maskHeight * (1 - this.value / this.goal)}px)`;
+        str = `translateY(${
+          this.valueLoaded
+            ? this.maskHeight * (1 - this._value / this.goal)
+            : this.maskHeight
+          }px)`;
         break;
 
       case 'left':
-        str = `translateX(${-this.maskWidth * (1 - this.value / this.goal)}px)`;
+        str = `translateX(${
+          this.valueLoaded
+            ? -this.maskWidth * (1 - this._value / this.goal)
+            : -this.maskWidth
+          }px)`;
         break;
 
       case 'right':
-        str = `translateX(${this.maskWidth * (1 - this.value / this.goal)}px)`;
+        str = `translateX(${
+          this.valueLoaded
+            ? this.maskWidth * (1 - this._value / this.goal)
+            : this.maskWidth
+          }px)`;
         break;
     }
     return this.sanitizer.bypassSecurityTrustStyle(str);
