@@ -29,7 +29,7 @@ ng2-kw-masked-stack is available via npm
 `npm install ng2-kw-masked-stack`
 
 Import MaskedStackModule in your app
-import { MaskedStackModule } from 'ng2-kw-masked-stack'
+`import { MaskedStackModule } from 'ng2-kw-masked-stack'`
 
 Use `<ng2-kw-masked-stack></ng2-kw-masked-stack>`.
 Set a width and height for the masked-stack and it will scale accordingly.

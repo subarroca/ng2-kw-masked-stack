@@ -1,3 +1,27 @@
-<p>
-  masked-stack works!
-</p>
+<svg
+  attr.viewBox = "0 0 {{width}} {{height}}"
+  style.width = "{{width}}px"
+  style.height = "{{height}}px">
+  <g
+    class = kw-holder>
+    <rect
+      x = 0
+      y = 0
+      [attr.width] = width
+      [attr.height] = height
+
+      class = kw-back
+      [style.fill] = bgColor/>
+
+    <rect
+      x = 0
+      y = 0
+      [attr.width] = width
+      [attr.height] = height
+      [style.transform] = position
+
+      class = kw-front
+      [style.transition] = "'transform ' + animationSecs + 's'"
+      [style.fill] = frontColor/>
+  </g>
+</svg>
