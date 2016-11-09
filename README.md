@@ -15,12 +15,13 @@ As seen on Angularbeers http://www.meetup.com/AngularJS-Beers/events/234753624/
 * goal: number = 100                  | maximum value allowed
 * value: number                       | value to be represented
 * animationSecs: number = 0.5         | animation of lines when changing values
+* uniqueId: string;
 
 
 
 ## Installing
 ng2-kw-masked-stack is available via npm
-`npm install ng2-kw-masked-stack`
+`npm install ng2-kw-masked-stack -S`
 
 Import MaskedStackModule in your app
 `import { MaskedStackModule } from 'ng2-kw-masked-stack'`
