@@ -22,25 +22,25 @@ As seen on Angularbeers http://www.meetup.com/AngularJS-Beers/events/234753624/
 ## Usage:
 Use your mask inside the component.
 Please note that mask cannot contain `g` and must be preceded by `svg:`
-```
-<ng2-kw-masked-stack
-  [bgColor] = .bgColor
-  [frontColor] = frontColor
-  
-  [maskWidth] = 100
-  [maskHeight] = 100
 
-  [value] = value
-  [from] = from
 
-  [uniqueId] = uniqueId>
-  <svg:circle
-    cx = 50
-    cy = 50
-    r = 100
-  />
-</ng2-kw-masked-stack>
-```
+    <ng2-kw-masked-stack
+      [bgColor] = .bgColor
+      [frontColor] = frontColor
+
+      [maskWidth] = 100
+      [maskHeight] = 100
+
+      [value] = value
+      [from] = from
+
+      [uniqueId] = uniqueId>
+      <svg:circle
+        cx = 50
+        cy = 50
+        r = 50
+      />
+    </ng2-kw-masked-stack>
 
 
 
