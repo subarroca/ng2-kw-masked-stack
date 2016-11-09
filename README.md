@@ -52,7 +52,7 @@ npm install ng2-kw-masked-stack -S;
 ```
 
 Import MaskedStackModule in your app
-```bash
+```typescript
 import { MaskedStackModule } from 'ng2-kw-masked-stack';
 ```
 
