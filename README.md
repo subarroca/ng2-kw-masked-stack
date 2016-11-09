@@ -23,33 +23,41 @@ As seen on Angularbeers http://www.meetup.com/AngularJS-Beers/events/234753624/
 Use your mask inside the component.
 Please note that mask cannot contain `g` and must be preceded by `svg:`
 
+```html
+<ng2-kw-masked-stack
+  [bgColor] = .bgColor
+  [frontColor] = frontColor
 
-    <ng2-kw-masked-stack
-      [bgColor] = .bgColor
-      [frontColor] = frontColor
+  [maskWidth] = 100
+  [maskHeight] = 100
 
-      [maskWidth] = 100
-      [maskHeight] = 100
+  [value] = value
+  [from] = from
 
-      [value] = value
-      [from] = from
-
-      [uniqueId] = uniqueId>
-      <svg:circle
-        cx = 50
-        cy = 50
-        r = 50
-      />
-    </ng2-kw-masked-stack>
+  [uniqueId] = uniqueId>
+  <svg:circle
+    cx = 50
+    cy = 50
+    r = 50
+  />
+</ng2-kw-masked-stack>
+```
 
 
 
 ## Installing
 ng2-kw-masked-stack is available via npm
-`npm install ng2-kw-masked-stack -S`
+```bash
+npm install ng2-kw-masked-stack -S;
+```
 
 Import MaskedStackModule in your app
-`import { MaskedStackModule } from 'ng2-kw-masked-stack'`
+```bash
+import { MaskedStackModule } from 'ng2-kw-masked-stack';
+```
 
-Use `<ng2-kw-masked-stack></ng2-kw-masked-stack>`.
+Use
+```html
+<ng2-kw-masked-stack></ng2-kw-masked-stack>
+```
 Set a width and height for the masked-stack and it will scale accordingly.
