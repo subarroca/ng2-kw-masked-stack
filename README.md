@@ -9,7 +9,7 @@ As seen on Angularbeers http://www.meetup.com/AngularJS-Beers/events/234753624/
 ## Installing
 ng2-kw-masked-stack is available via npm
 ```bash
-npm install ng2-kw-masked-stack -S;
+npm install ng2-kw-masked-stack -S
 ```
 
 Import MaskedStackModule in your app
